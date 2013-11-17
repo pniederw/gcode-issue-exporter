@@ -4,7 +4,7 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver
 
 email = ""
 password = ""
-projectName = "spock"
+projectName = ""
 targetFile = new File("$projectName-issues.json")
 
 firstExported = 0

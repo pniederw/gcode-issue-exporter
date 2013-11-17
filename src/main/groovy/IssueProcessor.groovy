@@ -1,7 +1,7 @@
 import groovy.json.JsonOutput
 import groovy.json.JsonSlurper
 
-projectName = "spock"
+projectName = ""
 sourceFile = new File("$projectName-issues.json")
 targetFile = new File("$projectName-issues-processed.json")
 
