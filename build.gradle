@@ -1,0 +1,25 @@
+apply plugin: "groovy"
+apply plugin: "idea"
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+  compile "org.codehaus.groovy:groovy-all:2.2.0-rc-3"
+	compile "org.gebish:geb-core:0.9.2"
+  compile "org.seleniumhq.selenium:selenium-htmlunit-driver:2.37.1"
+  compile "org.seleniumhq.selenium:selenium-support:2.37.1"
+}
+
+task extractIssues(type: JavaExec) {
+  main = "IssueExtractor"
+  classpath = sourceSets.main.runtimeClasspath
+}
+
+task processIssues(type: JavaExec) {
+  main = "IssueProcessor"
+  classpath = sourceSets.main.runtimeClasspath
+}
+
+
